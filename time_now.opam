@@ -12,8 +12,8 @@ build: [
 depends: [
   "ocaml" {>= "4.04.2"}
   "base"
-  "config_h"
   "jane-street-headers"
+  "jst-config"
   "ppx_base"
   "ppx_optcomp"
   "dune"                {build & >= "1.5.1"}
