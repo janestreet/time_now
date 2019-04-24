@@ -8,7 +8,7 @@ open! Base
 
 external nanoseconds_since_unix_epoch_or_zero
   :  unit
-    -> Int63.t
+  -> Int63.t
   = "time_now_nanoseconds_since_unix_epoch_or_zero"
 [@@noalloc]
 
@@ -16,7 +16,7 @@ external nanoseconds_since_unix_epoch_or_zero
 
 external nanoseconds_since_unix_epoch_or_zero
   :  unit
-    -> Int63.t
+  -> Int63.t
   = "time_now_nanoseconds_since_unix_epoch_or_zero"
 
 [%%endif]
