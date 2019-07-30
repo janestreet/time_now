@@ -24,11 +24,11 @@ external nanoseconds_since_unix_epoch_or_zero
 [%%ifdef
   JSC_POSIX_TIMERS]
 
-let[@inline never] gettime_failed () = failwith "clock_gettime(CLOCK_REALTIME) failed"
+let[@cold] gettime_failed () = failwith "clock_gettime(CLOCK_REALTIME) failed"
 
 [%%else]
 
-let[@inline never] gettime_failed () = failwith "gettimeofday failed"
+let[@cold] gettime_failed () = failwith "gettimeofday failed"
 
 [%%endif]
 
