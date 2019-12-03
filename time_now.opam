@@ -16,7 +16,7 @@ depends: [
   "jst-config"
   "ppx_base"
   "ppx_optcomp"
-  "dune"                {>= "1.5.1"}
+  "dune"                {>= "2.0.0"}
 ]
 synopsis: "Reports the current time"
 description: "
