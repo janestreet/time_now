@@ -1,4 +1,5 @@
 opam-version: "2.0"
+version: "v0.15.0"
 maintainer: "Jane Street developers"
 authors: ["Jane Street Group, LLC"]
 homepage: "https://github.com/janestreet/time_now"
@@ -10,12 +11,12 @@ build: [
   ["dune" "build" "-p" name "-j" jobs]
 ]
 depends: [
-  "ocaml" {>= "4.08.0"}
-  "base"
-  "jane-street-headers"
-  "jst-config"
-  "ppx_base"
-  "ppx_optcomp"
+  "ocaml"               {>= "4.08.0"}
+  "base"                {>= "v0.15" & < "v0.16"}
+  "jane-street-headers" {>= "v0.15" & < "v0.16"}
+  "jst-config"          {>= "v0.15" & < "v0.16"}
+  "ppx_base"            {>= "v0.15" & < "v0.16"}
+  "ppx_optcomp"         {>= "v0.15" & < "v0.16"}
   "dune"                {>= "2.0.0"}
 ]
 synopsis: "Reports the current time"
