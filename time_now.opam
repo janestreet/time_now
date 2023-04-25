@@ -1,4 +1,5 @@
 opam-version: "2.0"
+version: "v0.16.0"
 maintainer: "Jane Street developers"
 authors: ["Jane Street Group, LLC"]
 homepage: "https://github.com/janestreet/time_now"
@@ -10,12 +11,12 @@ build: [
   ["dune" "build" "-p" name "-j" jobs]
 ]
 depends: [
-  "ocaml" {>= "4.14.0"}
-  "base"
-  "jane-street-headers"
-  "jst-config"
-  "ppx_base"
-  "ppx_optcomp"
+  "ocaml"               {>= "4.14.0"}
+  "base"                {>= "v0.16" & < "v0.17"}
+  "jane-street-headers" {>= "v0.16" & < "v0.17"}
+  "jst-config"          {>= "v0.16" & < "v0.17"}
+  "ppx_base"            {>= "v0.16" & < "v0.17"}
+  "ppx_optcomp"         {>= "v0.16" & < "v0.17"}
   "dune"                {>= "2.0.0"}
 ]
 available: arch != "arm32" & arch != "x86_32"
