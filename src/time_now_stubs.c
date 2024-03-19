@@ -35,3 +35,7 @@ CAMLprim value time_now_nanoseconds_since_unix_epoch_or_zero() {
 }
 
 #endif
+
+CAMLprim value time_now_nanosecond_counter_for_timing() {
+  return time_now_nanoseconds_since_unix_epoch_or_zero();
+}

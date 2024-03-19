@@ -10,12 +10,23 @@ external nanoseconds_since_unix_epoch_or_zero
   = "time_now_nanoseconds_since_unix_epoch_or_zero"
   [@@noalloc]
 
+external nanosecond_counter_for_timing
+  :  unit
+  -> Int63.t
+  = "time_now_nanosecond_counter_for_timing"
+  [@@noalloc]
+
 [%%else]
 
 external nanoseconds_since_unix_epoch_or_zero
   :  unit
   -> Int63.t
   = "time_now_nanoseconds_since_unix_epoch_or_zero"
+
+external nanosecond_counter_for_timing
+  :  unit
+  -> Int63.t
+  = "time_now_nanosecond_counter_for_timing"
 
 [%%endif]
 [%%ifdef JSC_POSIX_TIMERS]
