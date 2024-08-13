@@ -8,13 +8,13 @@ external nanoseconds_since_unix_epoch_or_zero
   :  unit
   -> Int63.t
   = "time_now_nanoseconds_since_unix_epoch_or_zero"
-  [@@noalloc]
+[@@noalloc]
 
 external nanosecond_counter_for_timing
   :  unit
   -> Int63.t
   = "time_now_nanosecond_counter_for_timing"
-  [@@noalloc]
+[@@noalloc]
 
 [%%else]
 
