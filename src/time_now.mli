@@ -4,6 +4,7 @@ open! Base
 
     In Javascript, the resolution of the timestamp returned by this function is 1ms. *)
 val nanoseconds_since_unix_epoch : unit -> Int63.t
+[@@zero_alloc]
 
 (** [nanosecond_counter_for_timing] returns the number of nanos since an arbitrary epoch
     that is fixed at program startup. On some platforms the epoch is the unix epoch, and
