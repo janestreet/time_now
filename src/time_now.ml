@@ -47,7 +47,7 @@ let[@cold] [@zero_alloc] gettime_failed () = failwith "gettimeofday failed"
 
 [%%endif]
 
-let nanoseconds_since_unix_epoch () =
+let[@zero_alloc] nanoseconds_since_unix_epoch () =
   let t = nanoseconds_since_unix_epoch_or_zero () in
   if Int63.( <> ) t Int63.zero then t else (gettime_failed [@zero_alloc assume]) ()
 ;;
