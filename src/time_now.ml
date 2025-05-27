@@ -7,12 +7,14 @@ open! Base
 external nanoseconds_since_unix_epoch_or_zero
   :  unit
   -> Int63.t
+  @@ portable
   = "time_now_nanoseconds_since_unix_epoch_or_zero"
 [@@noalloc]
 
 external nanosecond_counter_for_timing
   :  unit
   -> Int63.t
+  @@ portable
   = "time_now_nanosecond_counter_for_timing"
 [@@noalloc]
 
@@ -21,6 +23,7 @@ external nanosecond_counter_for_timing
 external nanoseconds_since_unix_epoch_or_zero
   :  unit
   -> Int63.t
+  @@ portable
   = "time_now_nanoseconds_since_unix_epoch_or_zero"
 
 (* Zero_alloc is not required on 32-bit targets, but we need "assume" to satisfy
@@ -32,6 +35,7 @@ let[@zero_alloc assume] [@inline always] nanoseconds_since_unix_epoch_or_zero ()
 external nanosecond_counter_for_timing
   :  unit
   -> Int63.t
+  @@ portable
   = "time_now_nanosecond_counter_for_timing"
 
 [%%endif]

@@ -1,3 +1,5 @@
+@@ portable
+
 open! Base
 
 (** Returns the number of nanoseconds that have passed since the unix epoch.
