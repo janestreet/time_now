@@ -2,7 +2,7 @@
 
 open! Base
 
-[%%ifdef JSC_ARCH_SIXTYFOUR]
+[%%ifdef JSC_ARCH_AMD64]
 
 external nanoseconds_since_unix_epoch_or_zero
   :  unit
