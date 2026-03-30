@@ -5,9 +5,9 @@
   (flags -std=c11 -fPIC))
  (name time_now)
  (public_name time_now)
- (libraries base jane-street-headers)
+ (libraries jane-street-headers base)
  (preprocess
-  (pps ppx_base ppx_optcomp))
+  (pps ppx_base ppx_optcomp -compare-require-explicit-locality))
  (preprocessor_deps config.h)
  (js_of_ocaml
   (javascript_files runtime.js))
