@@ -2,7 +2,7 @@
  (foreign_stubs
   (language c)
   (names time_now_stubs)
-  (flags -std=c11 -fPIC))
+  (flags (:include c_flags.sexp)))
  (name time_now)
  (public_name time_now)
  (libraries base jane-street-headers)
@@ -17,3 +17,8 @@
  (deps)
  (action
   (copy %{lib:jst-config:config.h} config.h)))
+
+(rule
+ (targets c_flags.sexp)
+ (deps (:discover config/discover.exe))
+ (action (run %{discover})))
