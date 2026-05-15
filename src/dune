@@ -7,7 +7,7 @@
  (public_name time_now)
  (libraries jane-street-headers base)
  (preprocess
-  (pps ppx_base ppx_optcomp -compare-require-explicit-locality))
+  (pps ppx_optcomp))
  (preprocessor_deps config.h)
  (js_of_ocaml
   (javascript_files runtime.js))
